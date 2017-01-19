@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="47" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="330" />
+   <clocksource preferredWidth="329" />
+   <frequency preferredWidth="311" />
+  </columns>
+ </clocktable>
+ <library expandedCategories="Project,Library" />
+ <window x="89" y="0" width="1277" height="768" />
+ <generation synthesis="VHDL" />
+</preferences>

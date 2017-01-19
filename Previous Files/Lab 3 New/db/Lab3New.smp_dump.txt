@@ -1,0 +1,10 @@
+
+State Machine - |BlackJack|FSM:F_SM|state
+Name state.EndGame state.PlayerWin state.DealerWin state.Winner state.DealerTurn state.PlayerTurn state.Start 
+state.Start 0 0 0 0 0 0 0 
+state.PlayerTurn 0 0 0 0 0 1 1 
+state.DealerTurn 0 0 0 0 1 0 1 
+state.Winner 0 0 0 1 0 0 1 
+state.DealerWin 0 0 1 0 0 0 1 
+state.PlayerWin 0 1 0 0 0 0 1 
+state.EndGame 1 0 0 0 0 0 1 

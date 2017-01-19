@@ -1,0 +1,1575 @@
+TimeQuest Timing Analyzer report for EECE_LAB3
+Wed Oct 08 13:44:06 2014
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK_50'
+ 12. Slow Model Hold: 'CLOCK_50'
+ 13. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'CLOCK_50'
+ 26. Fast Model Hold: 'CLOCK_50'
+ 27. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; EECE_LAB3                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_50   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 175.59 MHz ; 175.59 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Slow Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -4.695 ; -146.712      ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Slow Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.391 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.380 ; -75.380            ;
++----------+--------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                                                                       ;
++--------+-----------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.695 ; DataPath:Data_Path|dealerhand[9]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 5.733      ;
+; -4.694 ; DataPath:Data_Path|dealerhand[9]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 5.732      ;
+; -4.606 ; DataPath:Data_Path|dealerhand[7]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.643      ;
+; -4.605 ; DataPath:Data_Path|dealerhand[7]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.642      ;
+; -4.595 ; DataPath:Data_Path|dealerhand[5]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.632      ;
+; -4.594 ; DataPath:Data_Path|dealerhand[5]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.631      ;
+; -4.535 ; DataPath:Data_Path|dealerhand[10] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 5.573      ;
+; -4.534 ; DataPath:Data_Path|dealerhand[8]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 5.572      ;
+; -4.534 ; DataPath:Data_Path|dealerhand[10] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 5.572      ;
+; -4.533 ; DataPath:Data_Path|dealerhand[8]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 5.571      ;
+; -4.492 ; DataPath:Data_Path|dealerhand[1]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.528      ;
+; -4.491 ; DataPath:Data_Path|dealerhand[1]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.527      ;
+; -4.482 ; DataPath:Data_Path|playerhand[1]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.519      ;
+; -4.481 ; DataPath:Data_Path|playerhand[1]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.518      ;
+; -4.475 ; DataPath:Data_Path|dealerhand[4]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.512      ;
+; -4.474 ; DataPath:Data_Path|dealerhand[4]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.511      ;
+; -4.461 ; DataPath:Data_Path|dealerhand[3]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.497      ;
+; -4.460 ; DataPath:Data_Path|dealerhand[3]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.496      ;
+; -4.418 ; DataPath:Data_Path|playerhand[0]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.455      ;
+; -4.417 ; DataPath:Data_Path|playerhand[0]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.454      ;
+; -4.396 ; DataPath:Data_Path|playerhand[3]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.433      ;
+; -4.395 ; DataPath:Data_Path|playerhand[3]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.432      ;
+; -4.380 ; DataPath:Data_Path|playerhand[5]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.417      ;
+; -4.379 ; DataPath:Data_Path|playerhand[5]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.416      ;
+; -4.375 ; DataPath:Data_Path|playerhand[9]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.422      ;
+; -4.375 ; DataPath:Data_Path|playerhand[7]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.412      ;
+; -4.374 ; DataPath:Data_Path|playerhand[9]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.421      ;
+; -4.374 ; DataPath:Data_Path|playerhand[7]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.411      ;
+; -4.344 ; DataPath:Data_Path|dealerhand[0]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.380      ;
+; -4.343 ; DataPath:Data_Path|dealerhand[0]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.379      ;
+; -4.341 ; DataPath:Data_Path|dealerhand[12] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.377      ;
+; -4.340 ; DataPath:Data_Path|dealerhand[12] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.376      ;
+; -4.339 ; DataPath:Data_Path|playerhand[4]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.376      ;
+; -4.338 ; DataPath:Data_Path|playerhand[4]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.375      ;
+; -4.335 ; DataPath:Data_Path|dealerhand[6]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.372      ;
+; -4.334 ; DataPath:Data_Path|dealerhand[6]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.371      ;
+; -4.329 ; DataPath:Data_Path|dealerhand[15] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.365      ;
+; -4.328 ; DataPath:Data_Path|dealerhand[15] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.364      ;
+; -4.324 ; DataPath:Data_Path|playerhand[11] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.371      ;
+; -4.323 ; DataPath:Data_Path|playerhand[11] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.370      ;
+; -4.321 ; DataPath:Data_Path|playerhand[10] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.368      ;
+; -4.320 ; DataPath:Data_Path|playerhand[10] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.367      ;
+; -4.307 ; DataPath:Data_Path|playerhand[6]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.344      ;
+; -4.306 ; DataPath:Data_Path|playerhand[6]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.343      ;
+; -4.268 ; DataPath:Data_Path|playerhand[15] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.315      ;
+; -4.267 ; DataPath:Data_Path|playerhand[15] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.314      ;
+; -4.255 ; DataPath:Data_Path|dealerhand[11] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 5.293      ;
+; -4.254 ; DataPath:Data_Path|dealerhand[11] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 5.292      ;
+; -4.236 ; DataPath:Data_Path|playerhand[13] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.283      ;
+; -4.235 ; DataPath:Data_Path|playerhand[13] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.282      ;
+; -4.214 ; DataPath:Data_Path|dealerhand[14] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.250      ;
+; -4.213 ; DataPath:Data_Path|dealerhand[14] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.249      ;
+; -4.192 ; DataPath:Data_Path|playerhand[8]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.239      ;
+; -4.191 ; DataPath:Data_Path|playerhand[8]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.238      ;
+; -4.173 ; DataPath:Data_Path|dealerhand[13] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.209      ;
+; -4.172 ; DataPath:Data_Path|dealerhand[13] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.208      ;
+; -4.170 ; DataPath:Data_Path|dealerhand[2]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.206      ;
+; -4.169 ; DataPath:Data_Path|dealerhand[2]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 5.205      ;
+; -4.138 ; DataPath:Data_Path|playerhand[2]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.175      ;
+; -4.137 ; DataPath:Data_Path|playerhand[2]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 5.174      ;
+; -4.015 ; DataPath:Data_Path|playerhand[12] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.062      ;
+; -4.014 ; DataPath:Data_Path|playerhand[12] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.061      ;
+; -3.992 ; DataPath:Data_Path|playerhand[14] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.039      ;
+; -3.991 ; DataPath:Data_Path|playerhand[14] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 5.038      ;
+; -3.905 ; DataPath:Data_Path|dealerhand[9]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 4.943      ;
+; -3.816 ; DataPath:Data_Path|dealerhand[7]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.853      ;
+; -3.805 ; DataPath:Data_Path|dealerhand[5]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.842      ;
+; -3.745 ; DataPath:Data_Path|dealerhand[10] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 4.783      ;
+; -3.744 ; DataPath:Data_Path|dealerhand[8]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 4.782      ;
+; -3.702 ; DataPath:Data_Path|dealerhand[1]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 4.738      ;
+; -3.685 ; DataPath:Data_Path|dealerhand[4]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.722      ;
+; -3.674 ; DataPath:Data_Path|playerhand[1]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.711      ;
+; -3.671 ; DataPath:Data_Path|dealerhand[3]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 4.707      ;
+; -3.610 ; DataPath:Data_Path|playerhand[0]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.647      ;
+; -3.588 ; DataPath:Data_Path|playerhand[3]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.625      ;
+; -3.572 ; DataPath:Data_Path|playerhand[5]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.609      ;
+; -3.567 ; DataPath:Data_Path|playerhand[9]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 4.614      ;
+; -3.567 ; DataPath:Data_Path|playerhand[7]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.604      ;
+; -3.554 ; DataPath:Data_Path|dealerhand[9]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 4.592      ;
+; -3.554 ; DataPath:Data_Path|dealerhand[0]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 4.590      ;
+; -3.551 ; DataPath:Data_Path|dealerhand[12] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 4.587      ;
+; -3.546 ; DataPath:Data_Path|dealerhand[7]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.583      ;
+; -3.545 ; DataPath:Data_Path|dealerhand[6]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.582      ;
+; -3.539 ; DataPath:Data_Path|dealerhand[15] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 4.575      ;
+; -3.535 ; DataPath:Data_Path|dealerhand[5]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.572      ;
+; -3.531 ; DataPath:Data_Path|playerhand[4]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.568      ;
+; -3.516 ; DataPath:Data_Path|playerhand[11] ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 4.563      ;
+; -3.513 ; DataPath:Data_Path|playerhand[10] ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 4.560      ;
+; -3.499 ; DataPath:Data_Path|playerhand[6]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.536      ;
+; -3.465 ; DataPath:Data_Path|dealerhand[11] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 4.503      ;
+; -3.460 ; DataPath:Data_Path|playerhand[15] ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 4.507      ;
+; -3.432 ; DataPath:Data_Path|dealerhand[1]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 4.468      ;
+; -3.428 ; DataPath:Data_Path|playerhand[13] ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 4.475      ;
+; -3.424 ; DataPath:Data_Path|dealerhand[14] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 4.460      ;
+; -3.415 ; DataPath:Data_Path|dealerhand[4]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 4.452      ;
+; -3.401 ; DataPath:Data_Path|dealerhand[3]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 4.437      ;
+; -3.393 ; DataPath:Data_Path|dealerhand[8]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 4.431      ;
+; -3.384 ; DataPath:Data_Path|playerhand[8]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.011      ; 4.431      ;
+; -3.383 ; DataPath:Data_Path|dealerhand[13] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 4.419      ;
+; -3.380 ; DataPath:Data_Path|dealerhand[2]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 4.416      ;
++--------+-----------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                                                                                                                     ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                               ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; FSM:F_SM|state.Start                                    ; FSM:F_SM|state.Start                                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|pcard[0]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; FSM:F_SM|pcard[1]                                       ; FSM:F_SM|pcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; FSM:F_SM|pcard[2]                                       ; FSM:F_SM|pcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; FSM:F_SM|dcard[1]                                       ; FSM:F_SM|dcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; DataPath:Data_Path|flag                                 ; DataPath:Data_Path|flag                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; FSM:F_SM|state.DealerTurn                               ; FSM:F_SM|state.DealerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|dcard[0]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|dcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.533 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.799      ;
+; 0.536 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.802      ;
+; 0.538 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.804      ;
+; 0.539 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.541 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.807      ;
+; 0.541 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|dcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.807      ;
+; 0.570 ; FSM:F_SM|pcard[1]                                       ; FSM:F_SM|pcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.836      ;
+; 0.574 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|newPlayerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.840      ;
+; 0.577 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|newPlayerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.843      ;
+; 0.578 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|newPlayerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.844      ;
+; 0.669 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.935      ;
+; 0.673 ; FSM:F_SM|pcard[2]                                       ; FSM:F_SM|newPlayerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.939      ;
+; 0.674 ; FSM:F_SM|pcard[2]                                       ; FSM:F_SM|newPlayerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.940      ;
+; 0.675 ; FSM:F_SM|pcard[2]                                       ; FSM:F_SM|newPlayerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.941      ;
+; 0.677 ; FSM:F_SM|pcard[2]                                       ; FSM:F_SM|newPlayerCard[3]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.943      ;
+; 0.708 ; FSM:F_SM|newDealerCard[3]                               ; DataPath:Data_Path|d[3]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.974      ;
+; 0.709 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; DataPath:Data_Path|dealHand:dealhand1|hand[3]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.975      ;
+; 0.735 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; DataPath:Data_Path|dealHand:dealhand1|hand[1]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.001      ;
+; 0.746 ; FSM:F_SM|newPlayerCard[3]                               ; DataPath:Data_Path|p[3]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.012      ;
+; 0.748 ; FSM:F_SM|newPlayerCard[0]                               ; DataPath:Data_Path|p[0]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.014      ;
+; 0.749 ; FSM:F_SM|i                                              ; FSM:F_SM|step                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.015      ;
+; 0.764 ; FSM:F_SM|newDealerCard[2]                               ; DataPath:Data_Path|d[2]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.030      ;
+; 0.765 ; FSM:F_SM|newDealerCard[1]                               ; DataPath:Data_Path|d[1]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.031      ;
+; 0.795 ; FSM:F_SM|pcard[1]                                       ; FSM:F_SM|newPlayerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.061      ;
+; 0.811 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.077      ;
+; 0.813 ; FSM:F_SM|newDealerCard[0]                               ; DataPath:Data_Path|d[0]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.079      ;
+; 0.813 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|dcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.079      ;
+; 0.813 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.079      ;
+; 0.814 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.080      ;
+; 0.815 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.081      ;
+; 0.817 ; FSM:F_SM|state.DealerTurn                               ; FSM:F_SM|state.PlayerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.083      ;
+; 0.817 ; FSM:F_SM|pcard[1]                                       ; FSM:F_SM|newPlayerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.083      ;
+; 0.836 ; FSM:F_SM|dcard[1]                                       ; FSM:F_SM|dcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.102      ;
+; 0.841 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.107      ;
+; 0.842 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.108      ;
+; 0.844 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|pcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.110      ;
+; 0.845 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|pcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.111      ;
+; 0.847 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.113      ;
+; 0.847 ; FSM:F_SM|pcard[1]                                       ; FSM:F_SM|newPlayerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.113      ;
+; 0.900 ; FSM:F_SM|newPlayerCard[1]                               ; DataPath:Data_Path|p[1]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.166      ;
+; 0.911 ; FSM:F_SM|newPlayerCard[2]                               ; DataPath:Data_Path|p[2]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.177      ;
+; 0.940 ; DataPath:Data_Path|p[2]                                 ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.206      ;
+; 0.954 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|newDealerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.220      ;
+; 0.955 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|newDealerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.221      ;
+; 0.955 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|newDealerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.221      ;
+; 0.966 ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ; DataPath:Data_Path|dealerhand[10]                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.006     ; 1.226      ;
+; 0.981 ; FSM:F_SM|dcard[1]                                       ; FSM:F_SM|newDealerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.247      ;
+; 1.000 ; FSM:F_SM|dcard[1]                                       ; FSM:F_SM|newDealerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.266      ;
+; 1.027 ; FSM:F_SM|dcard[1]                                       ; FSM:F_SM|newDealerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.293      ;
+; 1.077 ; FSM:F_SM|step                                           ; FSM:F_SM|state.Start                                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.004      ; 1.347      ;
+; 1.078 ; FSM:F_SM|state.Start                                    ; FSM:F_SM|dcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.344      ;
+; 1.078 ; FSM:F_SM|state.Start                                    ; FSM:F_SM|dcard[0]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.344      ;
+; 1.081 ; DataPath:Data_Path|p[1]                                 ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.347      ;
+; 1.096 ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ; DataPath:Data_Path|dealerhand[6]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 1.357      ;
+; 1.140 ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ; DataPath:Data_Path|dealerhand[4]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 1.401      ;
+; 1.155 ; DataPath:Data_Path|dealHand:dealhand1|hand[3]           ; DataPath:Data_Path|dealerhand[7]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 1.416      ;
+; 1.162 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|newDealerCard[3]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.428      ;
+; 1.203 ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ; DataPath:Data_Path|playerhand[6]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 1.464      ;
+; 1.228 ; FSM:F_SM|state.DealerTurn                               ; FSM:F_SM|dcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.494      ;
+; 1.228 ; FSM:F_SM|state.DealerTurn                               ; FSM:F_SM|dcard[0]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.494      ;
+; 1.244 ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ; DataPath:Data_Path|dealerhand[14]                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 1.506      ;
+; 1.291 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|newDealerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.557      ;
+; 1.291 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|newDealerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.557      ;
+; 1.291 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|newDealerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.557      ;
+; 1.294 ; FSM:F_SM|newPlayerCard[3]                               ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.560      ;
+; 1.308 ; DataPath:Data_Path|dealHand:dealhand1|hand[1]           ; DataPath:Data_Path|dealerhand[5]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 1.569      ;
+; 1.312 ; DataPath:Data_Path|d[2]                                 ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 1.573      ;
+; 1.332 ; DataPath:Data_Path|user_input                           ; DataPath:Data_Path|dealHand:dealhand1|hand[3]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.597      ;
+; 1.332 ; DataPath:Data_Path|user_input                           ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.597      ;
+; 1.332 ; DataPath:Data_Path|user_input                           ; DataPath:Data_Path|dealHand:dealhand1|hand[1]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.597      ;
+; 1.349 ; DataPath:Data_Path|user_input                           ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.614      ;
+; 1.349 ; DataPath:Data_Path|user_input                           ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.614      ;
+; 1.349 ; DataPath:Data_Path|user_input                           ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.614      ;
+; 1.349 ; DataPath:Data_Path|user_input                           ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.614      ;
+; 1.349 ; DataPath:Data_Path|user_input                           ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.614      ;
+; 1.349 ; FSM:F_SM|state.Start                                    ; FSM:F_SM|dcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.615      ;
+; 1.349 ; DataPath:Data_Path|p[3]                                 ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.615      ;
+; 1.351 ; DataPath:Data_Path|dealHand:dealhand1|hand[1]           ; DataPath:Data_Path|dealerhand[9]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.006     ; 1.611      ;
+; 1.363 ; FSM:F_SM|state.PlayerTurn                               ; FSM:F_SM|state.DealerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.629      ;
+; 1.370 ; FSM:F_SM|state.Start                                    ; FSM:F_SM|state.PlayerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.636      ;
+; 1.372 ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ; DataPath:Data_Path|playerhand[4]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 1.633      ;
+; 1.378 ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ; DataPath:Data_Path|dealerhand[12]                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 1.640      ;
+; 1.399 ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ; DataPath:Data_Path|dealerhand[8]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.006     ; 1.659      ;
+; 1.435 ; DataPath:Data_Path|dealerStands                         ; FSM:F_SM|state.DealerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.010      ; 1.711      ;
+; 1.435 ; DataPath:Data_Path|dealerStands                         ; FSM:F_SM|state.PlayerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.010      ; 1.711      ;
+; 1.435 ; DataPath:Data_Path|d[3]                                 ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 1.696      ;
+; 1.439 ; FSM:F_SM|newPlayerCard[0]                               ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.705      ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                                                                  ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                  ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[0]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[0]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[1]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[1]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[2]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[2]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[3]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[3]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerBust                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerBust                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerStands                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerStands                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerWins                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerWins                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[0]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[0]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[10]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[10]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[11]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[11]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[12]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[12]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[13]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[13]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[14]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[14]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[15]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[15]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[1]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[1]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[2]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[2]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[3]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[3]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[4]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[4]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[5]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[5]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[6]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[6]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[7]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[7]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[8]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[8]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[9]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[9]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|flag                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|flag                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[0]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[0]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[1]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[1]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[2]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[2]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[3]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[3]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerBust                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerBust                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerWins                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerWins                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[0]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[0]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[10]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[10]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[11]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[11]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[12]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[12]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[13]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[13]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[14]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[14]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[15]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[15]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[1]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[1]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[2]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[2]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[3]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[3]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[4]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[4]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[5]                        ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 4.510 ; 4.510 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; 4.510 ; 4.510 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; 4.303 ; 4.303 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 2.612 ; 2.612 ; Rise       ; CLOCK_50        ;
+;  SW[0]    ; CLOCK_50   ; 2.612 ; 2.612 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; -4.073 ; -4.073 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; -4.279 ; -4.279 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; -4.073 ; -4.073 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; -0.957 ; -0.957 ; Rise       ; CLOCK_50        ;
+;  SW[0]    ; CLOCK_50   ; -0.957 ; -0.957 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 9.103  ; 9.103  ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 9.103  ; 9.103  ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 9.082  ; 9.082  ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 9.094  ; 9.094  ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 8.866  ; 8.866  ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 8.881  ; 8.881  ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 8.870  ; 8.870  ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 8.844  ; 8.844  ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 9.319  ; 9.319  ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 9.319  ; 9.319  ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 9.013  ; 9.013  ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 9.117  ; 9.117  ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 9.119  ; 9.119  ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 8.863  ; 8.863  ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 8.896  ; 8.896  ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 8.652  ; 8.652  ; Rise       ; CLOCK_50        ;
+; HEX2[*]   ; CLOCK_50   ; 8.452  ; 8.452  ; Rise       ; CLOCK_50        ;
+;  HEX2[0]  ; CLOCK_50   ; 8.451  ; 8.451  ; Rise       ; CLOCK_50        ;
+;  HEX2[1]  ; CLOCK_50   ; 8.138  ; 8.138  ; Rise       ; CLOCK_50        ;
+;  HEX2[2]  ; CLOCK_50   ; 8.217  ; 8.217  ; Rise       ; CLOCK_50        ;
+;  HEX2[3]  ; CLOCK_50   ; 8.199  ; 8.199  ; Rise       ; CLOCK_50        ;
+;  HEX2[4]  ; CLOCK_50   ; 8.450  ; 8.450  ; Rise       ; CLOCK_50        ;
+;  HEX2[5]  ; CLOCK_50   ; 8.452  ; 8.452  ; Rise       ; CLOCK_50        ;
+;  HEX2[6]  ; CLOCK_50   ; 8.192  ; 8.192  ; Rise       ; CLOCK_50        ;
+; HEX3[*]   ; CLOCK_50   ; 8.251  ; 8.251  ; Rise       ; CLOCK_50        ;
+;  HEX3[0]  ; CLOCK_50   ; 7.893  ; 7.893  ; Rise       ; CLOCK_50        ;
+;  HEX3[1]  ; CLOCK_50   ; 8.197  ; 8.197  ; Rise       ; CLOCK_50        ;
+;  HEX3[2]  ; CLOCK_50   ; 8.235  ; 8.235  ; Rise       ; CLOCK_50        ;
+;  HEX3[3]  ; CLOCK_50   ; 8.251  ; 8.251  ; Rise       ; CLOCK_50        ;
+;  HEX3[4]  ; CLOCK_50   ; 8.209  ; 8.209  ; Rise       ; CLOCK_50        ;
+;  HEX3[5]  ; CLOCK_50   ; 8.219  ; 8.219  ; Rise       ; CLOCK_50        ;
+;  HEX3[6]  ; CLOCK_50   ; 8.193  ; 8.193  ; Rise       ; CLOCK_50        ;
+; HEX4[*]   ; CLOCK_50   ; 10.864 ; 10.864 ; Rise       ; CLOCK_50        ;
+;  HEX4[0]  ; CLOCK_50   ; 9.895  ; 9.895  ; Rise       ; CLOCK_50        ;
+;  HEX4[1]  ; CLOCK_50   ; 10.836 ; 10.836 ; Rise       ; CLOCK_50        ;
+;  HEX4[2]  ; CLOCK_50   ; 10.864 ; 10.864 ; Rise       ; CLOCK_50        ;
+;  HEX4[3]  ; CLOCK_50   ; 9.590  ; 9.590  ; Rise       ; CLOCK_50        ;
+;  HEX4[4]  ; CLOCK_50   ; 10.615 ; 10.615 ; Rise       ; CLOCK_50        ;
+;  HEX4[5]  ; CLOCK_50   ; 10.179 ; 10.179 ; Rise       ; CLOCK_50        ;
+;  HEX4[6]  ; CLOCK_50   ; 10.115 ; 10.115 ; Rise       ; CLOCK_50        ;
+; HEX5[*]   ; CLOCK_50   ; 11.941 ; 11.941 ; Rise       ; CLOCK_50        ;
+;  HEX5[0]  ; CLOCK_50   ; 10.376 ; 10.376 ; Rise       ; CLOCK_50        ;
+;  HEX5[1]  ; CLOCK_50   ; 10.156 ; 10.156 ; Rise       ; CLOCK_50        ;
+;  HEX5[2]  ; CLOCK_50   ; 11.941 ; 11.941 ; Rise       ; CLOCK_50        ;
+;  HEX5[3]  ; CLOCK_50   ; 11.610 ; 11.610 ; Rise       ; CLOCK_50        ;
+;  HEX5[4]  ; CLOCK_50   ; 11.850 ; 11.850 ; Rise       ; CLOCK_50        ;
+;  HEX5[5]  ; CLOCK_50   ; 11.242 ; 11.242 ; Rise       ; CLOCK_50        ;
+;  HEX5[6]  ; CLOCK_50   ; 10.124 ; 10.124 ; Rise       ; CLOCK_50        ;
+; HEX6[*]   ; CLOCK_50   ; 11.290 ; 11.290 ; Rise       ; CLOCK_50        ;
+;  HEX6[0]  ; CLOCK_50   ; 10.198 ; 10.198 ; Rise       ; CLOCK_50        ;
+;  HEX6[1]  ; CLOCK_50   ; 10.822 ; 10.822 ; Rise       ; CLOCK_50        ;
+;  HEX6[2]  ; CLOCK_50   ; 11.290 ; 11.290 ; Rise       ; CLOCK_50        ;
+;  HEX6[3]  ; CLOCK_50   ; 10.269 ; 10.269 ; Rise       ; CLOCK_50        ;
+;  HEX6[4]  ; CLOCK_50   ; 11.223 ; 11.223 ; Rise       ; CLOCK_50        ;
+;  HEX6[5]  ; CLOCK_50   ; 10.902 ; 10.902 ; Rise       ; CLOCK_50        ;
+;  HEX6[6]  ; CLOCK_50   ; 10.486 ; 10.486 ; Rise       ; CLOCK_50        ;
+; HEX7[*]   ; CLOCK_50   ; 10.915 ; 10.915 ; Rise       ; CLOCK_50        ;
+;  HEX7[0]  ; CLOCK_50   ; 10.915 ; 10.915 ; Rise       ; CLOCK_50        ;
+;  HEX7[1]  ; CLOCK_50   ; 9.480  ; 9.480  ; Rise       ; CLOCK_50        ;
+;  HEX7[2]  ; CLOCK_50   ; 10.689 ; 10.689 ; Rise       ; CLOCK_50        ;
+;  HEX7[3]  ; CLOCK_50   ; 10.667 ; 10.667 ; Rise       ; CLOCK_50        ;
+;  HEX7[4]  ; CLOCK_50   ; 10.702 ; 10.702 ; Rise       ; CLOCK_50        ;
+;  HEX7[5]  ; CLOCK_50   ; 10.708 ; 10.708 ; Rise       ; CLOCK_50        ;
+;  HEX7[6]  ; CLOCK_50   ; 10.241 ; 10.241 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 7.454  ; 7.454  ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 7.454  ; 7.454  ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 7.145  ; 7.145  ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 7.659  ; 7.659  ; Rise       ; CLOCK_50        ;
+;  LEDR[5]  ; CLOCK_50   ; 7.645  ; 7.645  ; Rise       ; CLOCK_50        ;
+;  LEDR[6]  ; CLOCK_50   ; 7.659  ; 7.659  ; Rise       ; CLOCK_50        ;
+;  LEDR[7]  ; CLOCK_50   ; 7.409  ; 7.409  ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 8.118  ; 8.118  ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 8.372  ; 8.372  ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 8.352  ; 8.352  ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 8.363  ; 8.363  ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 8.135  ; 8.135  ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 8.150  ; 8.150  ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 8.139  ; 8.139  ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 8.118  ; 8.118  ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 8.041  ; 8.041  ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 8.704  ; 8.704  ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 8.401  ; 8.401  ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 8.504  ; 8.504  ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 8.508  ; 8.508  ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 8.244  ; 8.244  ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 8.280  ; 8.280  ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 8.041  ; 8.041  ; Rise       ; CLOCK_50        ;
+; HEX2[*]   ; CLOCK_50   ; 7.583  ; 7.583  ; Rise       ; CLOCK_50        ;
+;  HEX2[0]  ; CLOCK_50   ; 7.889  ; 7.889  ; Rise       ; CLOCK_50        ;
+;  HEX2[1]  ; CLOCK_50   ; 7.583  ; 7.583  ; Rise       ; CLOCK_50        ;
+;  HEX2[2]  ; CLOCK_50   ; 7.662  ; 7.662  ; Rise       ; CLOCK_50        ;
+;  HEX2[3]  ; CLOCK_50   ; 7.636  ; 7.636  ; Rise       ; CLOCK_50        ;
+;  HEX2[4]  ; CLOCK_50   ; 7.889  ; 7.889  ; Rise       ; CLOCK_50        ;
+;  HEX2[5]  ; CLOCK_50   ; 7.897  ; 7.897  ; Rise       ; CLOCK_50        ;
+;  HEX2[6]  ; CLOCK_50   ; 7.629  ; 7.629  ; Rise       ; CLOCK_50        ;
+; HEX3[*]   ; CLOCK_50   ; 7.603  ; 7.603  ; Rise       ; CLOCK_50        ;
+;  HEX3[0]  ; CLOCK_50   ; 7.603  ; 7.603  ; Rise       ; CLOCK_50        ;
+;  HEX3[1]  ; CLOCK_50   ; 7.908  ; 7.908  ; Rise       ; CLOCK_50        ;
+;  HEX3[2]  ; CLOCK_50   ; 7.947  ; 7.947  ; Rise       ; CLOCK_50        ;
+;  HEX3[3]  ; CLOCK_50   ; 7.961  ; 7.961  ; Rise       ; CLOCK_50        ;
+;  HEX3[4]  ; CLOCK_50   ; 7.918  ; 7.918  ; Rise       ; CLOCK_50        ;
+;  HEX3[5]  ; CLOCK_50   ; 7.929  ; 7.929  ; Rise       ; CLOCK_50        ;
+;  HEX3[6]  ; CLOCK_50   ; 7.903  ; 7.903  ; Rise       ; CLOCK_50        ;
+; HEX4[*]   ; CLOCK_50   ; 9.094  ; 9.094  ; Rise       ; CLOCK_50        ;
+;  HEX4[0]  ; CLOCK_50   ; 9.401  ; 9.401  ; Rise       ; CLOCK_50        ;
+;  HEX4[1]  ; CLOCK_50   ; 10.330 ; 10.330 ; Rise       ; CLOCK_50        ;
+;  HEX4[2]  ; CLOCK_50   ; 10.369 ; 10.369 ; Rise       ; CLOCK_50        ;
+;  HEX4[3]  ; CLOCK_50   ; 9.094  ; 9.094  ; Rise       ; CLOCK_50        ;
+;  HEX4[4]  ; CLOCK_50   ; 10.121 ; 10.121 ; Rise       ; CLOCK_50        ;
+;  HEX4[5]  ; CLOCK_50   ; 9.685  ; 9.685  ; Rise       ; CLOCK_50        ;
+;  HEX4[6]  ; CLOCK_50   ; 9.609  ; 9.609  ; Rise       ; CLOCK_50        ;
+; HEX5[*]   ; CLOCK_50   ; 8.778  ; 8.778  ; Rise       ; CLOCK_50        ;
+;  HEX5[0]  ; CLOCK_50   ; 9.038  ; 9.038  ; Rise       ; CLOCK_50        ;
+;  HEX5[1]  ; CLOCK_50   ; 8.820  ; 8.820  ; Rise       ; CLOCK_50        ;
+;  HEX5[2]  ; CLOCK_50   ; 10.601 ; 10.601 ; Rise       ; CLOCK_50        ;
+;  HEX5[3]  ; CLOCK_50   ; 10.269 ; 10.269 ; Rise       ; CLOCK_50        ;
+;  HEX5[4]  ; CLOCK_50   ; 10.517 ; 10.517 ; Rise       ; CLOCK_50        ;
+;  HEX5[5]  ; CLOCK_50   ; 9.896  ; 9.896  ; Rise       ; CLOCK_50        ;
+;  HEX5[6]  ; CLOCK_50   ; 8.778  ; 8.778  ; Rise       ; CLOCK_50        ;
+; HEX6[*]   ; CLOCK_50   ; 9.700  ; 9.700  ; Rise       ; CLOCK_50        ;
+;  HEX6[0]  ; CLOCK_50   ; 9.700  ; 9.700  ; Rise       ; CLOCK_50        ;
+;  HEX6[1]  ; CLOCK_50   ; 10.323 ; 10.323 ; Rise       ; CLOCK_50        ;
+;  HEX6[2]  ; CLOCK_50   ; 10.805 ; 10.805 ; Rise       ; CLOCK_50        ;
+;  HEX6[3]  ; CLOCK_50   ; 9.784  ; 9.784  ; Rise       ; CLOCK_50        ;
+;  HEX6[4]  ; CLOCK_50   ; 10.728 ; 10.728 ; Rise       ; CLOCK_50        ;
+;  HEX6[5]  ; CLOCK_50   ; 10.407 ; 10.407 ; Rise       ; CLOCK_50        ;
+;  HEX6[6]  ; CLOCK_50   ; 9.985  ; 9.985  ; Rise       ; CLOCK_50        ;
+; HEX7[*]   ; CLOCK_50   ; 9.123  ; 9.123  ; Rise       ; CLOCK_50        ;
+;  HEX7[0]  ; CLOCK_50   ; 10.558 ; 10.558 ; Rise       ; CLOCK_50        ;
+;  HEX7[1]  ; CLOCK_50   ; 9.123  ; 9.123  ; Rise       ; CLOCK_50        ;
+;  HEX7[2]  ; CLOCK_50   ; 10.332 ; 10.332 ; Rise       ; CLOCK_50        ;
+;  HEX7[3]  ; CLOCK_50   ; 10.311 ; 10.311 ; Rise       ; CLOCK_50        ;
+;  HEX7[4]  ; CLOCK_50   ; 10.346 ; 10.346 ; Rise       ; CLOCK_50        ;
+;  HEX7[5]  ; CLOCK_50   ; 10.350 ; 10.350 ; Rise       ; CLOCK_50        ;
+;  HEX7[6]  ; CLOCK_50   ; 9.883  ; 9.883  ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 7.145  ; 7.145  ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 7.454  ; 7.454  ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 7.145  ; 7.145  ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 7.409  ; 7.409  ; Rise       ; CLOCK_50        ;
+;  LEDR[5]  ; CLOCK_50   ; 7.645  ; 7.645  ; Rise       ; CLOCK_50        ;
+;  LEDR[6]  ; CLOCK_50   ; 7.659  ; 7.659  ; Rise       ; CLOCK_50        ;
+;  LEDR[7]  ; CLOCK_50   ; 7.409  ; 7.409  ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDG[5]     ; 5.703 ;    ;    ; 5.703 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDG[5]     ; 5.703 ;    ;    ; 5.703 ;
++------------+-------------+-------+----+----+-------+
+
+
++-----------------------------------+
+; Fast Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -1.443 ; -32.469       ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Fast Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.215 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.380 ; -75.380            ;
++----------+--------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                                                                       ;
++--------+-----------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.443 ; DataPath:Data_Path|dealerhand[9]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.477      ;
+; -1.441 ; DataPath:Data_Path|dealerhand[9]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.475      ;
+; -1.394 ; DataPath:Data_Path|dealerhand[7]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.427      ;
+; -1.392 ; DataPath:Data_Path|dealerhand[7]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.425      ;
+; -1.385 ; DataPath:Data_Path|dealerhand[5]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.418      ;
+; -1.383 ; DataPath:Data_Path|dealerhand[5]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.416      ;
+; -1.376 ; DataPath:Data_Path|dealerhand[8]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.410      ;
+; -1.374 ; DataPath:Data_Path|dealerhand[8]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.408      ;
+; -1.365 ; DataPath:Data_Path|dealerhand[10] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.399      ;
+; -1.363 ; DataPath:Data_Path|dealerhand[10] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.397      ;
+; -1.355 ; DataPath:Data_Path|dealerhand[4]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.388      ;
+; -1.353 ; DataPath:Data_Path|dealerhand[4]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.386      ;
+; -1.340 ; DataPath:Data_Path|playerhand[1]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.373      ;
+; -1.338 ; DataPath:Data_Path|playerhand[1]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.371      ;
+; -1.327 ; DataPath:Data_Path|dealerhand[1]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.359      ;
+; -1.325 ; DataPath:Data_Path|dealerhand[1]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.357      ;
+; -1.324 ; DataPath:Data_Path|playerhand[0]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.357      ;
+; -1.322 ; DataPath:Data_Path|playerhand[0]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.355      ;
+; -1.321 ; DataPath:Data_Path|dealerhand[3]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.353      ;
+; -1.319 ; DataPath:Data_Path|dealerhand[3]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.351      ;
+; -1.315 ; DataPath:Data_Path|playerhand[3]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.348      ;
+; -1.313 ; DataPath:Data_Path|playerhand[3]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.346      ;
+; -1.303 ; DataPath:Data_Path|playerhand[7]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.336      ;
+; -1.302 ; DataPath:Data_Path|playerhand[5]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.335      ;
+; -1.301 ; DataPath:Data_Path|playerhand[7]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.334      ;
+; -1.300 ; DataPath:Data_Path|playerhand[5]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.333      ;
+; -1.296 ; DataPath:Data_Path|dealerhand[12] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.328      ;
+; -1.296 ; DataPath:Data_Path|playerhand[9]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.341      ;
+; -1.294 ; DataPath:Data_Path|dealerhand[12] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.326      ;
+; -1.294 ; DataPath:Data_Path|playerhand[9]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.339      ;
+; -1.292 ; DataPath:Data_Path|playerhand[4]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.325      ;
+; -1.292 ; DataPath:Data_Path|dealerhand[15] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.324      ;
+; -1.290 ; DataPath:Data_Path|playerhand[4]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.323      ;
+; -1.290 ; DataPath:Data_Path|dealerhand[15] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.322      ;
+; -1.270 ; DataPath:Data_Path|dealerhand[6]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.303      ;
+; -1.268 ; DataPath:Data_Path|dealerhand[6]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.301      ;
+; -1.268 ; DataPath:Data_Path|playerhand[10] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.313      ;
+; -1.266 ; DataPath:Data_Path|playerhand[10] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.311      ;
+; -1.266 ; DataPath:Data_Path|dealerhand[0]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.298      ;
+; -1.264 ; DataPath:Data_Path|dealerhand[0]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.296      ;
+; -1.259 ; DataPath:Data_Path|playerhand[6]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.292      ;
+; -1.257 ; DataPath:Data_Path|playerhand[11] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.302      ;
+; -1.257 ; DataPath:Data_Path|playerhand[6]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.290      ;
+; -1.255 ; DataPath:Data_Path|playerhand[11] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.300      ;
+; -1.253 ; DataPath:Data_Path|dealerhand[11] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.287      ;
+; -1.251 ; DataPath:Data_Path|dealerhand[11] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.285      ;
+; -1.247 ; DataPath:Data_Path|playerhand[8]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.292      ;
+; -1.245 ; DataPath:Data_Path|playerhand[8]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.290      ;
+; -1.239 ; DataPath:Data_Path|playerhand[15] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.284      ;
+; -1.237 ; DataPath:Data_Path|playerhand[15] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.282      ;
+; -1.228 ; DataPath:Data_Path|playerhand[13] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.273      ;
+; -1.226 ; DataPath:Data_Path|playerhand[13] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.271      ;
+; -1.223 ; DataPath:Data_Path|dealerhand[14] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.255      ;
+; -1.221 ; DataPath:Data_Path|dealerhand[14] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.253      ;
+; -1.215 ; DataPath:Data_Path|dealerhand[13] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.247      ;
+; -1.213 ; DataPath:Data_Path|dealerhand[13] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.245      ;
+; -1.205 ; DataPath:Data_Path|playerhand[2]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.238      ;
+; -1.203 ; DataPath:Data_Path|playerhand[2]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.236      ;
+; -1.191 ; DataPath:Data_Path|dealerhand[2]  ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.223      ;
+; -1.189 ; DataPath:Data_Path|dealerhand[2]  ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.221      ;
+; -1.119 ; DataPath:Data_Path|dealerhand[9]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.153      ;
+; -1.116 ; DataPath:Data_Path|playerhand[12] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.161      ;
+; -1.114 ; DataPath:Data_Path|playerhand[14] ; DataPath:Data_Path|dealerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.159      ;
+; -1.114 ; DataPath:Data_Path|playerhand[12] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.159      ;
+; -1.112 ; DataPath:Data_Path|playerhand[14] ; DataPath:Data_Path|playerWins   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.157      ;
+; -1.070 ; DataPath:Data_Path|dealerhand[7]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.103      ;
+; -1.061 ; DataPath:Data_Path|dealerhand[5]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.094      ;
+; -1.052 ; DataPath:Data_Path|dealerhand[8]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.086      ;
+; -1.041 ; DataPath:Data_Path|dealerhand[10] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 2.075      ;
+; -1.031 ; DataPath:Data_Path|dealerhand[4]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.064      ;
+; -1.027 ; DataPath:Data_Path|playerhand[1]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.060      ;
+; -1.011 ; DataPath:Data_Path|playerhand[0]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.044      ;
+; -1.003 ; DataPath:Data_Path|dealerhand[1]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.035      ;
+; -1.002 ; DataPath:Data_Path|playerhand[3]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.035      ;
+; -0.997 ; DataPath:Data_Path|dealerhand[3]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.029      ;
+; -0.990 ; DataPath:Data_Path|playerhand[7]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.023      ;
+; -0.989 ; DataPath:Data_Path|playerhand[5]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.022      ;
+; -0.983 ; DataPath:Data_Path|playerhand[9]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.028      ;
+; -0.979 ; DataPath:Data_Path|playerhand[4]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 2.012      ;
+; -0.972 ; DataPath:Data_Path|dealerhand[12] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.004      ;
+; -0.968 ; DataPath:Data_Path|dealerhand[15] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.000      ;
+; -0.965 ; DataPath:Data_Path|dealerhand[9]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 1.999      ;
+; -0.955 ; DataPath:Data_Path|playerhand[10] ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 2.000      ;
+; -0.946 ; DataPath:Data_Path|dealerhand[6]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.979      ;
+; -0.946 ; DataPath:Data_Path|playerhand[6]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.979      ;
+; -0.944 ; DataPath:Data_Path|playerhand[11] ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 1.989      ;
+; -0.942 ; DataPath:Data_Path|dealerhand[0]  ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.974      ;
+; -0.937 ; DataPath:Data_Path|dealerhand[7]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.970      ;
+; -0.934 ; DataPath:Data_Path|playerhand[8]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 1.979      ;
+; -0.929 ; DataPath:Data_Path|dealerhand[11] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 1.963      ;
+; -0.928 ; DataPath:Data_Path|dealerhand[5]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.961      ;
+; -0.926 ; DataPath:Data_Path|playerhand[15] ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 1.971      ;
+; -0.915 ; DataPath:Data_Path|playerhand[13] ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.013      ; 1.960      ;
+; -0.899 ; DataPath:Data_Path|dealerhand[14] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.931      ;
+; -0.898 ; DataPath:Data_Path|dealerhand[8]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 1.932      ;
+; -0.898 ; DataPath:Data_Path|dealerhand[4]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.931      ;
+; -0.892 ; DataPath:Data_Path|playerhand[2]  ; DataPath:Data_Path|playerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 1.925      ;
+; -0.891 ; DataPath:Data_Path|dealerhand[13] ; DataPath:Data_Path|dealerStands ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.923      ;
+; -0.887 ; DataPath:Data_Path|dealerhand[10] ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.002      ; 1.921      ;
+; -0.870 ; DataPath:Data_Path|dealerhand[1]  ; DataPath:Data_Path|dealerBust   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.902      ;
++--------+-----------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                                                                                                                     ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                               ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; FSM:F_SM|state.Start                                    ; FSM:F_SM|state.Start                                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|pcard[0]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; FSM:F_SM|pcard[1]                                       ; FSM:F_SM|pcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; FSM:F_SM|pcard[2]                                       ; FSM:F_SM|pcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; FSM:F_SM|dcard[1]                                       ; FSM:F_SM|dcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; DataPath:Data_Path|flag                                 ; DataPath:Data_Path|flag                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; FSM:F_SM|state.DealerTurn                               ; FSM:F_SM|state.DealerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|dcard[0]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|dcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.246 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.398      ;
+; 0.247 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.399      ;
+; 0.248 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.400      ;
+; 0.250 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|dcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.402      ;
+; 0.251 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.403      ;
+; 0.254 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.406      ;
+; 0.267 ; FSM:F_SM|pcard[1]                                       ; FSM:F_SM|pcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.419      ;
+; 0.270 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|newPlayerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.422      ;
+; 0.272 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|newPlayerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.424      ;
+; 0.273 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|newPlayerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.425      ;
+; 0.304 ; FSM:F_SM|pcard[2]                                       ; FSM:F_SM|newPlayerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.456      ;
+; 0.306 ; FSM:F_SM|pcard[2]                                       ; FSM:F_SM|newPlayerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.458      ;
+; 0.308 ; FSM:F_SM|pcard[2]                                       ; FSM:F_SM|newPlayerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.460      ;
+; 0.312 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.465      ;
+; 0.322 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; DataPath:Data_Path|dealHand:dealhand1|hand[3]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.475      ;
+; 0.336 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; DataPath:Data_Path|dealHand:dealhand1|hand[1]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.489      ;
+; 0.337 ; FSM:F_SM|pcard[2]                                       ; FSM:F_SM|newPlayerCard[3]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.489      ;
+; 0.344 ; FSM:F_SM|newPlayerCard[3]                               ; DataPath:Data_Path|p[3]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.496      ;
+; 0.351 ; FSM:F_SM|newDealerCard[3]                               ; DataPath:Data_Path|d[3]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.503      ;
+; 0.360 ; FSM:F_SM|i                                              ; FSM:F_SM|step                                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; FSM:F_SM|newPlayerCard[0]                               ; DataPath:Data_Path|p[0]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.364 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|dcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.367 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.519      ;
+; 0.369 ; FSM:F_SM|state.DealerTurn                               ; FSM:F_SM|state.PlayerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; FSM:F_SM|dcard[1]                                       ; FSM:F_SM|dcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.374 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.376 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.378 ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.385 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|pcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.537      ;
+; 0.385 ; FSM:F_SM|pcard[1]                                       ; FSM:F_SM|newPlayerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.537      ;
+; 0.387 ; FSM:F_SM|newDealerCard[1]                               ; DataPath:Data_Path|d[1]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.539      ;
+; 0.387 ; FSM:F_SM|pcard[0]                                       ; FSM:F_SM|pcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.539      ;
+; 0.392 ; FSM:F_SM|newDealerCard[2]                               ; DataPath:Data_Path|d[2]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.544      ;
+; 0.392 ; FSM:F_SM|pcard[1]                                       ; FSM:F_SM|newPlayerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.544      ;
+; 0.393 ; FSM:F_SM|pcard[1]                                       ; FSM:F_SM|newPlayerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.545      ;
+; 0.400 ; FSM:F_SM|newDealerCard[0]                               ; DataPath:Data_Path|d[0]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.552      ;
+; 0.432 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|newDealerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.584      ;
+; 0.433 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|newDealerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.585      ;
+; 0.434 ; FSM:F_SM|dcard[0]                                       ; FSM:F_SM|newDealerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.586      ;
+; 0.435 ; FSM:F_SM|newPlayerCard[1]                               ; DataPath:Data_Path|p[1]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.587      ;
+; 0.442 ; DataPath:Data_Path|p[2]                                 ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.594      ;
+; 0.448 ; FSM:F_SM|newPlayerCard[2]                               ; DataPath:Data_Path|p[2]                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.600      ;
+; 0.451 ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ; DataPath:Data_Path|dealerhand[10]                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 0.598      ;
+; 0.466 ; FSM:F_SM|dcard[1]                                       ; FSM:F_SM|newDealerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.618      ;
+; 0.473 ; FSM:F_SM|dcard[1]                                       ; FSM:F_SM|newDealerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.625      ;
+; 0.473 ; FSM:F_SM|dcard[1]                                       ; FSM:F_SM|newDealerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.625      ;
+; 0.474 ; FSM:F_SM|state.Start                                    ; FSM:F_SM|dcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.626      ;
+; 0.475 ; FSM:F_SM|state.Start                                    ; FSM:F_SM|dcard[0]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.627      ;
+; 0.500 ; FSM:F_SM|step                                           ; FSM:F_SM|state.Start                                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.655      ;
+; 0.508 ; DataPath:Data_Path|p[1]                                 ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.660      ;
+; 0.518 ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ; DataPath:Data_Path|dealerhand[6]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 0.666      ;
+; 0.540 ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ; DataPath:Data_Path|dealerhand[4]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 0.687      ;
+; 0.544 ; FSM:F_SM|state.DealerTurn                               ; FSM:F_SM|dcard[1]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.696      ;
+; 0.545 ; FSM:F_SM|state.DealerTurn                               ; FSM:F_SM|dcard[0]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.697      ;
+; 0.549 ; DataPath:Data_Path|dealHand:dealhand1|hand[3]           ; DataPath:Data_Path|dealerhand[7]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 0.696      ;
+; 0.556 ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ; DataPath:Data_Path|playerhand[6]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 0.704      ;
+; 0.559 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|newDealerCard[3]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.711      ;
+; 0.566 ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ; DataPath:Data_Path|dealerhand[14]                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 0.715      ;
+; 0.570 ; FSM:F_SM|newPlayerCard[3]                               ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.722      ;
+; 0.589 ; FSM:F_SM|state.Start                                    ; FSM:F_SM|dcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.741      ;
+; 0.592 ; FSM:F_SM|state.Start                                    ; FSM:F_SM|state.PlayerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.744      ;
+; 0.601 ; DataPath:Data_Path|p[3]                                 ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.753      ;
+; 0.603 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|newDealerCard[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.755      ;
+; 0.603 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|newDealerCard[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.755      ;
+; 0.604 ; DataPath:Data_Path|dealHand:dealhand1|hand[1]           ; DataPath:Data_Path|dealerhand[5]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 0.751      ;
+; 0.610 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|newDealerCard[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.762      ;
+; 0.628 ; FSM:F_SM|state.PlayerTurn                               ; FSM:F_SM|state.DealerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.780      ;
+; 0.631 ; DataPath:Data_Path|dealHand:dealhand1|hand[1]           ; DataPath:Data_Path|dealerhand[9]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.006     ; 0.777      ;
+; 0.642 ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ; DataPath:Data_Path|playerhand[4]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 0.789      ;
+; 0.642 ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ; DataPath:Data_Path|dealerhand[12]                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 0.790      ;
+; 0.643 ; DataPath:Data_Path|dealerStands                         ; FSM:F_SM|state.DealerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.008      ; 0.803      ;
+; 0.643 ; DataPath:Data_Path|d[2]                                 ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 0.791      ;
+; 0.644 ; DataPath:Data_Path|dealerStands                         ; FSM:F_SM|state.PlayerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.008      ; 0.804      ;
+; 0.653 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|state.DealerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.654 ; FSM:F_SM|newPlayerCard[0]                               ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.806      ;
+; 0.654 ; FSM:F_SM|dcard[2]                                       ; FSM:F_SM|state.PlayerTurn                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.806      ;
+; 0.659 ; FSM:F_SM|state.DealerTurn                               ; FSM:F_SM|dcard[2]                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.811      ;
+; 0.661 ; FSM:F_SM|newPlayerCard[0]                               ; DataPath:Data_Path|playerhand[14]                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.017     ; 0.796      ;
+; 0.662 ; FSM:F_SM|newPlayerCard[0]                               ; DataPath:Data_Path|playerhand[15]                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.017     ; 0.797      ;
+; 0.662 ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ; DataPath:Data_Path|dealerhand[8]                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.006     ; 0.808      ;
+; 0.663 ; FSM:F_SM|newPlayerCard[0]                               ; DataPath:Data_Path|playerhand[12]                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.017     ; 0.798      ;
+; 0.663 ; FSM:F_SM|newPlayerCard[0]                               ; DataPath:Data_Path|playerhand[13]                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.017     ; 0.798      ;
+; 0.664 ; DataPath:Data_Path|d[3]                                 ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 0.812      ;
+; 0.667 ; DataPath:Data_Path|p[0]                                 ; DataPath:Data_Path|user_input                           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.819      ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                                                                  ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                  ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[0]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[0]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[1]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[1]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[2]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[2]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[3]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|d[3]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|hand[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealHand:dealhand1|random_counter[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerBust                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerBust                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerStands                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerStands                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerWins                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerWins                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[0]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[0]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[10]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[10]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[11]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[11]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[12]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[12]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[13]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[13]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[14]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[14]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[15]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[15]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[1]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[1]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[2]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[2]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[3]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[3]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[4]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[4]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[5]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[5]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[6]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[6]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[7]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[7]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[8]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[8]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[9]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|dealerhand[9]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|flag                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|flag                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[0]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[0]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[1]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[1]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[2]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[2]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[3]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|p[3]                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerBust                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerBust                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerWins                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerWins                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[0]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[0]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[10]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[10]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[11]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[11]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[12]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[12]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[13]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[13]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[14]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[14]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[15]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[15]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[1]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[1]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[2]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[2]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[3]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[3]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[4]                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[4]                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DataPath:Data_Path|playerhand[5]                        ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 2.509 ; 2.509 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; 2.509 ; 2.509 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; 2.402 ; 2.402 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 0.984 ; 0.984 ; Rise       ; CLOCK_50        ;
+;  SW[0]    ; CLOCK_50   ; 0.984 ; 0.984 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; -2.282 ; -2.282 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; -2.369 ; -2.369 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; -2.282 ; -2.282 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; -0.162 ; -0.162 ; Rise       ; CLOCK_50        ;
+;  SW[0]    ; CLOCK_50   ; -0.162 ; -0.162 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 4.906 ; 4.906 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 4.906 ; 4.906 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 4.878 ; 4.878 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 4.891 ; 4.891 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 4.793 ; 4.793 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 4.805 ; 4.805 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 4.792 ; 4.792 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 4.781 ; 4.781 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 5.000 ; 5.000 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 5.000 ; 5.000 ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 4.850 ; 4.850 ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 4.814 ; 4.814 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 4.819 ; 4.819 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 4.714 ; 4.714 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 4.731 ; 4.731 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 4.657 ; 4.657 ; Rise       ; CLOCK_50        ;
+; HEX2[*]   ; CLOCK_50   ; 4.538 ; 4.538 ; Rise       ; CLOCK_50        ;
+;  HEX2[0]  ; CLOCK_50   ; 4.538 ; 4.538 ; Rise       ; CLOCK_50        ;
+;  HEX2[1]  ; CLOCK_50   ; 4.376 ; 4.376 ; Rise       ; CLOCK_50        ;
+;  HEX2[2]  ; CLOCK_50   ; 4.444 ; 4.444 ; Rise       ; CLOCK_50        ;
+;  HEX2[3]  ; CLOCK_50   ; 4.439 ; 4.439 ; Rise       ; CLOCK_50        ;
+;  HEX2[4]  ; CLOCK_50   ; 4.535 ; 4.535 ; Rise       ; CLOCK_50        ;
+;  HEX2[5]  ; CLOCK_50   ; 4.536 ; 4.536 ; Rise       ; CLOCK_50        ;
+;  HEX2[6]  ; CLOCK_50   ; 4.441 ; 4.441 ; Rise       ; CLOCK_50        ;
+; HEX3[*]   ; CLOCK_50   ; 4.444 ; 4.444 ; Rise       ; CLOCK_50        ;
+;  HEX3[0]  ; CLOCK_50   ; 4.257 ; 4.257 ; Rise       ; CLOCK_50        ;
+;  HEX3[1]  ; CLOCK_50   ; 4.406 ; 4.406 ; Rise       ; CLOCK_50        ;
+;  HEX3[2]  ; CLOCK_50   ; 4.433 ; 4.433 ; Rise       ; CLOCK_50        ;
+;  HEX3[3]  ; CLOCK_50   ; 4.444 ; 4.444 ; Rise       ; CLOCK_50        ;
+;  HEX3[4]  ; CLOCK_50   ; 4.416 ; 4.416 ; Rise       ; CLOCK_50        ;
+;  HEX3[5]  ; CLOCK_50   ; 4.416 ; 4.416 ; Rise       ; CLOCK_50        ;
+;  HEX3[6]  ; CLOCK_50   ; 4.400 ; 4.400 ; Rise       ; CLOCK_50        ;
+; HEX4[*]   ; CLOCK_50   ; 5.840 ; 5.840 ; Rise       ; CLOCK_50        ;
+;  HEX4[0]  ; CLOCK_50   ; 5.234 ; 5.234 ; Rise       ; CLOCK_50        ;
+;  HEX4[1]  ; CLOCK_50   ; 5.669 ; 5.669 ; Rise       ; CLOCK_50        ;
+;  HEX4[2]  ; CLOCK_50   ; 5.840 ; 5.840 ; Rise       ; CLOCK_50        ;
+;  HEX4[3]  ; CLOCK_50   ; 5.109 ; 5.109 ; Rise       ; CLOCK_50        ;
+;  HEX4[4]  ; CLOCK_50   ; 5.526 ; 5.526 ; Rise       ; CLOCK_50        ;
+;  HEX4[5]  ; CLOCK_50   ; 5.485 ; 5.485 ; Rise       ; CLOCK_50        ;
+;  HEX4[6]  ; CLOCK_50   ; 5.349 ; 5.349 ; Rise       ; CLOCK_50        ;
+; HEX5[*]   ; CLOCK_50   ; 6.225 ; 6.225 ; Rise       ; CLOCK_50        ;
+;  HEX5[0]  ; CLOCK_50   ; 5.464 ; 5.464 ; Rise       ; CLOCK_50        ;
+;  HEX5[1]  ; CLOCK_50   ; 5.389 ; 5.389 ; Rise       ; CLOCK_50        ;
+;  HEX5[2]  ; CLOCK_50   ; 6.208 ; 6.208 ; Rise       ; CLOCK_50        ;
+;  HEX5[3]  ; CLOCK_50   ; 5.993 ; 5.993 ; Rise       ; CLOCK_50        ;
+;  HEX5[4]  ; CLOCK_50   ; 6.225 ; 6.225 ; Rise       ; CLOCK_50        ;
+;  HEX5[5]  ; CLOCK_50   ; 5.817 ; 5.817 ; Rise       ; CLOCK_50        ;
+;  HEX5[6]  ; CLOCK_50   ; 5.366 ; 5.366 ; Rise       ; CLOCK_50        ;
+; HEX6[*]   ; CLOCK_50   ; 5.971 ; 5.971 ; Rise       ; CLOCK_50        ;
+;  HEX6[0]  ; CLOCK_50   ; 5.374 ; 5.374 ; Rise       ; CLOCK_50        ;
+;  HEX6[1]  ; CLOCK_50   ; 5.746 ; 5.746 ; Rise       ; CLOCK_50        ;
+;  HEX6[2]  ; CLOCK_50   ; 5.918 ; 5.918 ; Rise       ; CLOCK_50        ;
+;  HEX6[3]  ; CLOCK_50   ; 5.494 ; 5.494 ; Rise       ; CLOCK_50        ;
+;  HEX6[4]  ; CLOCK_50   ; 5.971 ; 5.971 ; Rise       ; CLOCK_50        ;
+;  HEX6[5]  ; CLOCK_50   ; 5.712 ; 5.712 ; Rise       ; CLOCK_50        ;
+;  HEX6[6]  ; CLOCK_50   ; 5.552 ; 5.552 ; Rise       ; CLOCK_50        ;
+; HEX7[*]   ; CLOCK_50   ; 5.731 ; 5.731 ; Rise       ; CLOCK_50        ;
+;  HEX7[0]  ; CLOCK_50   ; 5.731 ; 5.731 ; Rise       ; CLOCK_50        ;
+;  HEX7[1]  ; CLOCK_50   ; 5.135 ; 5.135 ; Rise       ; CLOCK_50        ;
+;  HEX7[2]  ; CLOCK_50   ; 5.626 ; 5.626 ; Rise       ; CLOCK_50        ;
+;  HEX7[3]  ; CLOCK_50   ; 5.608 ; 5.608 ; Rise       ; CLOCK_50        ;
+;  HEX7[4]  ; CLOCK_50   ; 5.635 ; 5.635 ; Rise       ; CLOCK_50        ;
+;  HEX7[5]  ; CLOCK_50   ; 5.644 ; 5.644 ; Rise       ; CLOCK_50        ;
+;  HEX7[6]  ; CLOCK_50   ; 5.477 ; 5.477 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 4.168 ; 4.168 ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 4.168 ; 4.168 ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 4.000 ; 4.000 ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 4.252 ; 4.252 ; Rise       ; CLOCK_50        ;
+;  LEDR[5]  ; CLOCK_50   ; 4.252 ; 4.252 ; Rise       ; CLOCK_50        ;
+;  LEDR[6]  ; CLOCK_50   ; 4.252 ; 4.252 ; Rise       ; CLOCK_50        ;
+;  LEDR[7]  ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 4.493 ; 4.493 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 4.618 ; 4.618 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 4.590 ; 4.590 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 4.603 ; 4.603 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 4.505 ; 4.505 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 4.514 ; 4.514 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 4.504 ; 4.504 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 4.493 ; 4.493 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 4.380 ; 4.380 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 4.718 ; 4.718 ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 4.573 ; 4.573 ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 4.534 ; 4.534 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 4.542 ; 4.542 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 4.427 ; 4.427 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 4.448 ; 4.448 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 4.380 ; 4.380 ; Rise       ; CLOCK_50        ;
+; HEX2[*]   ; CLOCK_50   ; 4.124 ; 4.124 ; Rise       ; CLOCK_50        ;
+;  HEX2[0]  ; CLOCK_50   ; 4.279 ; 4.279 ; Rise       ; CLOCK_50        ;
+;  HEX2[1]  ; CLOCK_50   ; 4.124 ; 4.124 ; Rise       ; CLOCK_50        ;
+;  HEX2[2]  ; CLOCK_50   ; 4.193 ; 4.193 ; Rise       ; CLOCK_50        ;
+;  HEX2[3]  ; CLOCK_50   ; 4.179 ; 4.179 ; Rise       ; CLOCK_50        ;
+;  HEX2[4]  ; CLOCK_50   ; 4.279 ; 4.279 ; Rise       ; CLOCK_50        ;
+;  HEX2[5]  ; CLOCK_50   ; 4.283 ; 4.283 ; Rise       ; CLOCK_50        ;
+;  HEX2[6]  ; CLOCK_50   ; 4.183 ; 4.183 ; Rise       ; CLOCK_50        ;
+; HEX3[*]   ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
+;  HEX3[0]  ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
+;  HEX3[1]  ; CLOCK_50   ; 4.288 ; 4.288 ; Rise       ; CLOCK_50        ;
+;  HEX3[2]  ; CLOCK_50   ; 4.316 ; 4.316 ; Rise       ; CLOCK_50        ;
+;  HEX3[3]  ; CLOCK_50   ; 4.323 ; 4.323 ; Rise       ; CLOCK_50        ;
+;  HEX3[4]  ; CLOCK_50   ; 4.297 ; 4.297 ; Rise       ; CLOCK_50        ;
+;  HEX3[5]  ; CLOCK_50   ; 4.297 ; 4.297 ; Rise       ; CLOCK_50        ;
+;  HEX3[6]  ; CLOCK_50   ; 4.281 ; 4.281 ; Rise       ; CLOCK_50        ;
+; HEX4[*]   ; CLOCK_50   ; 4.896 ; 4.896 ; Rise       ; CLOCK_50        ;
+;  HEX4[0]  ; CLOCK_50   ; 5.023 ; 5.023 ; Rise       ; CLOCK_50        ;
+;  HEX4[1]  ; CLOCK_50   ; 5.455 ; 5.455 ; Rise       ; CLOCK_50        ;
+;  HEX4[2]  ; CLOCK_50   ; 5.631 ; 5.631 ; Rise       ; CLOCK_50        ;
+;  HEX4[3]  ; CLOCK_50   ; 4.896 ; 4.896 ; Rise       ; CLOCK_50        ;
+;  HEX4[4]  ; CLOCK_50   ; 5.318 ; 5.318 ; Rise       ; CLOCK_50        ;
+;  HEX4[5]  ; CLOCK_50   ; 5.277 ; 5.277 ; Rise       ; CLOCK_50        ;
+;  HEX4[6]  ; CLOCK_50   ; 5.131 ; 5.131 ; Rise       ; CLOCK_50        ;
+; HEX5[*]   ; CLOCK_50   ; 4.771 ; 4.771 ; Rise       ; CLOCK_50        ;
+;  HEX5[0]  ; CLOCK_50   ; 4.875 ; 4.875 ; Rise       ; CLOCK_50        ;
+;  HEX5[1]  ; CLOCK_50   ; 4.800 ; 4.800 ; Rise       ; CLOCK_50        ;
+;  HEX5[2]  ; CLOCK_50   ; 5.615 ; 5.615 ; Rise       ; CLOCK_50        ;
+;  HEX5[3]  ; CLOCK_50   ; 5.398 ; 5.398 ; Rise       ; CLOCK_50        ;
+;  HEX5[4]  ; CLOCK_50   ; 5.634 ; 5.634 ; Rise       ; CLOCK_50        ;
+;  HEX5[5]  ; CLOCK_50   ; 5.222 ; 5.222 ; Rise       ; CLOCK_50        ;
+;  HEX5[6]  ; CLOCK_50   ; 4.771 ; 4.771 ; Rise       ; CLOCK_50        ;
+; HEX6[*]   ; CLOCK_50   ; 5.162 ; 5.162 ; Rise       ; CLOCK_50        ;
+;  HEX6[0]  ; CLOCK_50   ; 5.162 ; 5.162 ; Rise       ; CLOCK_50        ;
+;  HEX6[1]  ; CLOCK_50   ; 5.531 ; 5.531 ; Rise       ; CLOCK_50        ;
+;  HEX6[2]  ; CLOCK_50   ; 5.716 ; 5.716 ; Rise       ; CLOCK_50        ;
+;  HEX6[3]  ; CLOCK_50   ; 5.291 ; 5.291 ; Rise       ; CLOCK_50        ;
+;  HEX6[4]  ; CLOCK_50   ; 5.757 ; 5.757 ; Rise       ; CLOCK_50        ;
+;  HEX6[5]  ; CLOCK_50   ; 5.502 ; 5.502 ; Rise       ; CLOCK_50        ;
+;  HEX6[6]  ; CLOCK_50   ; 5.337 ; 5.337 ; Rise       ; CLOCK_50        ;
+; HEX7[*]   ; CLOCK_50   ; 4.978 ; 4.978 ; Rise       ; CLOCK_50        ;
+;  HEX7[0]  ; CLOCK_50   ; 5.576 ; 5.576 ; Rise       ; CLOCK_50        ;
+;  HEX7[1]  ; CLOCK_50   ; 4.978 ; 4.978 ; Rise       ; CLOCK_50        ;
+;  HEX7[2]  ; CLOCK_50   ; 5.470 ; 5.470 ; Rise       ; CLOCK_50        ;
+;  HEX7[3]  ; CLOCK_50   ; 5.451 ; 5.451 ; Rise       ; CLOCK_50        ;
+;  HEX7[4]  ; CLOCK_50   ; 5.475 ; 5.475 ; Rise       ; CLOCK_50        ;
+;  HEX7[5]  ; CLOCK_50   ; 5.488 ; 5.488 ; Rise       ; CLOCK_50        ;
+;  HEX7[6]  ; CLOCK_50   ; 5.315 ; 5.315 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 4.000 ; 4.000 ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 4.168 ; 4.168 ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 4.000 ; 4.000 ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
+;  LEDR[5]  ; CLOCK_50   ; 4.252 ; 4.252 ; Rise       ; CLOCK_50        ;
+;  LEDR[6]  ; CLOCK_50   ; 4.252 ; 4.252 ; Rise       ; CLOCK_50        ;
+;  LEDR[7]  ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDG[5]     ; 3.081 ;    ;    ; 3.081 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDG[5]     ; 3.081 ;    ;    ; 3.081 ;
++------------+-------------+-------+----+----+-------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -4.695   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK_50        ; -4.695   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -146.712 ; 0.0   ; 0.0      ; 0.0     ; -75.38              ;
+;  CLOCK_50        ; -146.712 ; 0.000 ; N/A      ; N/A     ; -75.380             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 4.510 ; 4.510 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; 4.510 ; 4.510 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; 4.303 ; 4.303 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 2.612 ; 2.612 ; Rise       ; CLOCK_50        ;
+;  SW[0]    ; CLOCK_50   ; 2.612 ; 2.612 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; -2.282 ; -2.282 ; Rise       ; CLOCK_50        ;
+;  KEY[0]   ; CLOCK_50   ; -2.369 ; -2.369 ; Rise       ; CLOCK_50        ;
+;  KEY[3]   ; CLOCK_50   ; -2.282 ; -2.282 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; -0.162 ; -0.162 ; Rise       ; CLOCK_50        ;
+;  SW[0]    ; CLOCK_50   ; -0.162 ; -0.162 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 9.103  ; 9.103  ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 9.103  ; 9.103  ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 9.082  ; 9.082  ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 9.094  ; 9.094  ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 8.866  ; 8.866  ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 8.881  ; 8.881  ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 8.870  ; 8.870  ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 8.844  ; 8.844  ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 9.319  ; 9.319  ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 9.319  ; 9.319  ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 9.013  ; 9.013  ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 9.117  ; 9.117  ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 9.119  ; 9.119  ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 8.863  ; 8.863  ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 8.896  ; 8.896  ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 8.652  ; 8.652  ; Rise       ; CLOCK_50        ;
+; HEX2[*]   ; CLOCK_50   ; 8.452  ; 8.452  ; Rise       ; CLOCK_50        ;
+;  HEX2[0]  ; CLOCK_50   ; 8.451  ; 8.451  ; Rise       ; CLOCK_50        ;
+;  HEX2[1]  ; CLOCK_50   ; 8.138  ; 8.138  ; Rise       ; CLOCK_50        ;
+;  HEX2[2]  ; CLOCK_50   ; 8.217  ; 8.217  ; Rise       ; CLOCK_50        ;
+;  HEX2[3]  ; CLOCK_50   ; 8.199  ; 8.199  ; Rise       ; CLOCK_50        ;
+;  HEX2[4]  ; CLOCK_50   ; 8.450  ; 8.450  ; Rise       ; CLOCK_50        ;
+;  HEX2[5]  ; CLOCK_50   ; 8.452  ; 8.452  ; Rise       ; CLOCK_50        ;
+;  HEX2[6]  ; CLOCK_50   ; 8.192  ; 8.192  ; Rise       ; CLOCK_50        ;
+; HEX3[*]   ; CLOCK_50   ; 8.251  ; 8.251  ; Rise       ; CLOCK_50        ;
+;  HEX3[0]  ; CLOCK_50   ; 7.893  ; 7.893  ; Rise       ; CLOCK_50        ;
+;  HEX3[1]  ; CLOCK_50   ; 8.197  ; 8.197  ; Rise       ; CLOCK_50        ;
+;  HEX3[2]  ; CLOCK_50   ; 8.235  ; 8.235  ; Rise       ; CLOCK_50        ;
+;  HEX3[3]  ; CLOCK_50   ; 8.251  ; 8.251  ; Rise       ; CLOCK_50        ;
+;  HEX3[4]  ; CLOCK_50   ; 8.209  ; 8.209  ; Rise       ; CLOCK_50        ;
+;  HEX3[5]  ; CLOCK_50   ; 8.219  ; 8.219  ; Rise       ; CLOCK_50        ;
+;  HEX3[6]  ; CLOCK_50   ; 8.193  ; 8.193  ; Rise       ; CLOCK_50        ;
+; HEX4[*]   ; CLOCK_50   ; 10.864 ; 10.864 ; Rise       ; CLOCK_50        ;
+;  HEX4[0]  ; CLOCK_50   ; 9.895  ; 9.895  ; Rise       ; CLOCK_50        ;
+;  HEX4[1]  ; CLOCK_50   ; 10.836 ; 10.836 ; Rise       ; CLOCK_50        ;
+;  HEX4[2]  ; CLOCK_50   ; 10.864 ; 10.864 ; Rise       ; CLOCK_50        ;
+;  HEX4[3]  ; CLOCK_50   ; 9.590  ; 9.590  ; Rise       ; CLOCK_50        ;
+;  HEX4[4]  ; CLOCK_50   ; 10.615 ; 10.615 ; Rise       ; CLOCK_50        ;
+;  HEX4[5]  ; CLOCK_50   ; 10.179 ; 10.179 ; Rise       ; CLOCK_50        ;
+;  HEX4[6]  ; CLOCK_50   ; 10.115 ; 10.115 ; Rise       ; CLOCK_50        ;
+; HEX5[*]   ; CLOCK_50   ; 11.941 ; 11.941 ; Rise       ; CLOCK_50        ;
+;  HEX5[0]  ; CLOCK_50   ; 10.376 ; 10.376 ; Rise       ; CLOCK_50        ;
+;  HEX5[1]  ; CLOCK_50   ; 10.156 ; 10.156 ; Rise       ; CLOCK_50        ;
+;  HEX5[2]  ; CLOCK_50   ; 11.941 ; 11.941 ; Rise       ; CLOCK_50        ;
+;  HEX5[3]  ; CLOCK_50   ; 11.610 ; 11.610 ; Rise       ; CLOCK_50        ;
+;  HEX5[4]  ; CLOCK_50   ; 11.850 ; 11.850 ; Rise       ; CLOCK_50        ;
+;  HEX5[5]  ; CLOCK_50   ; 11.242 ; 11.242 ; Rise       ; CLOCK_50        ;
+;  HEX5[6]  ; CLOCK_50   ; 10.124 ; 10.124 ; Rise       ; CLOCK_50        ;
+; HEX6[*]   ; CLOCK_50   ; 11.290 ; 11.290 ; Rise       ; CLOCK_50        ;
+;  HEX6[0]  ; CLOCK_50   ; 10.198 ; 10.198 ; Rise       ; CLOCK_50        ;
+;  HEX6[1]  ; CLOCK_50   ; 10.822 ; 10.822 ; Rise       ; CLOCK_50        ;
+;  HEX6[2]  ; CLOCK_50   ; 11.290 ; 11.290 ; Rise       ; CLOCK_50        ;
+;  HEX6[3]  ; CLOCK_50   ; 10.269 ; 10.269 ; Rise       ; CLOCK_50        ;
+;  HEX6[4]  ; CLOCK_50   ; 11.223 ; 11.223 ; Rise       ; CLOCK_50        ;
+;  HEX6[5]  ; CLOCK_50   ; 10.902 ; 10.902 ; Rise       ; CLOCK_50        ;
+;  HEX6[6]  ; CLOCK_50   ; 10.486 ; 10.486 ; Rise       ; CLOCK_50        ;
+; HEX7[*]   ; CLOCK_50   ; 10.915 ; 10.915 ; Rise       ; CLOCK_50        ;
+;  HEX7[0]  ; CLOCK_50   ; 10.915 ; 10.915 ; Rise       ; CLOCK_50        ;
+;  HEX7[1]  ; CLOCK_50   ; 9.480  ; 9.480  ; Rise       ; CLOCK_50        ;
+;  HEX7[2]  ; CLOCK_50   ; 10.689 ; 10.689 ; Rise       ; CLOCK_50        ;
+;  HEX7[3]  ; CLOCK_50   ; 10.667 ; 10.667 ; Rise       ; CLOCK_50        ;
+;  HEX7[4]  ; CLOCK_50   ; 10.702 ; 10.702 ; Rise       ; CLOCK_50        ;
+;  HEX7[5]  ; CLOCK_50   ; 10.708 ; 10.708 ; Rise       ; CLOCK_50        ;
+;  HEX7[6]  ; CLOCK_50   ; 10.241 ; 10.241 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 7.454  ; 7.454  ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 7.454  ; 7.454  ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 7.145  ; 7.145  ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 7.659  ; 7.659  ; Rise       ; CLOCK_50        ;
+;  LEDR[5]  ; CLOCK_50   ; 7.645  ; 7.645  ; Rise       ; CLOCK_50        ;
+;  LEDR[6]  ; CLOCK_50   ; 7.659  ; 7.659  ; Rise       ; CLOCK_50        ;
+;  LEDR[7]  ; CLOCK_50   ; 7.409  ; 7.409  ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 4.493 ; 4.493 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 4.618 ; 4.618 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 4.590 ; 4.590 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 4.603 ; 4.603 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 4.505 ; 4.505 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 4.514 ; 4.514 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 4.504 ; 4.504 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 4.493 ; 4.493 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 4.380 ; 4.380 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 4.718 ; 4.718 ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 4.573 ; 4.573 ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 4.534 ; 4.534 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 4.542 ; 4.542 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 4.427 ; 4.427 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 4.448 ; 4.448 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 4.380 ; 4.380 ; Rise       ; CLOCK_50        ;
+; HEX2[*]   ; CLOCK_50   ; 4.124 ; 4.124 ; Rise       ; CLOCK_50        ;
+;  HEX2[0]  ; CLOCK_50   ; 4.279 ; 4.279 ; Rise       ; CLOCK_50        ;
+;  HEX2[1]  ; CLOCK_50   ; 4.124 ; 4.124 ; Rise       ; CLOCK_50        ;
+;  HEX2[2]  ; CLOCK_50   ; 4.193 ; 4.193 ; Rise       ; CLOCK_50        ;
+;  HEX2[3]  ; CLOCK_50   ; 4.179 ; 4.179 ; Rise       ; CLOCK_50        ;
+;  HEX2[4]  ; CLOCK_50   ; 4.279 ; 4.279 ; Rise       ; CLOCK_50        ;
+;  HEX2[5]  ; CLOCK_50   ; 4.283 ; 4.283 ; Rise       ; CLOCK_50        ;
+;  HEX2[6]  ; CLOCK_50   ; 4.183 ; 4.183 ; Rise       ; CLOCK_50        ;
+; HEX3[*]   ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
+;  HEX3[0]  ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
+;  HEX3[1]  ; CLOCK_50   ; 4.288 ; 4.288 ; Rise       ; CLOCK_50        ;
+;  HEX3[2]  ; CLOCK_50   ; 4.316 ; 4.316 ; Rise       ; CLOCK_50        ;
+;  HEX3[3]  ; CLOCK_50   ; 4.323 ; 4.323 ; Rise       ; CLOCK_50        ;
+;  HEX3[4]  ; CLOCK_50   ; 4.297 ; 4.297 ; Rise       ; CLOCK_50        ;
+;  HEX3[5]  ; CLOCK_50   ; 4.297 ; 4.297 ; Rise       ; CLOCK_50        ;
+;  HEX3[6]  ; CLOCK_50   ; 4.281 ; 4.281 ; Rise       ; CLOCK_50        ;
+; HEX4[*]   ; CLOCK_50   ; 4.896 ; 4.896 ; Rise       ; CLOCK_50        ;
+;  HEX4[0]  ; CLOCK_50   ; 5.023 ; 5.023 ; Rise       ; CLOCK_50        ;
+;  HEX4[1]  ; CLOCK_50   ; 5.455 ; 5.455 ; Rise       ; CLOCK_50        ;
+;  HEX4[2]  ; CLOCK_50   ; 5.631 ; 5.631 ; Rise       ; CLOCK_50        ;
+;  HEX4[3]  ; CLOCK_50   ; 4.896 ; 4.896 ; Rise       ; CLOCK_50        ;
+;  HEX4[4]  ; CLOCK_50   ; 5.318 ; 5.318 ; Rise       ; CLOCK_50        ;
+;  HEX4[5]  ; CLOCK_50   ; 5.277 ; 5.277 ; Rise       ; CLOCK_50        ;
+;  HEX4[6]  ; CLOCK_50   ; 5.131 ; 5.131 ; Rise       ; CLOCK_50        ;
+; HEX5[*]   ; CLOCK_50   ; 4.771 ; 4.771 ; Rise       ; CLOCK_50        ;
+;  HEX5[0]  ; CLOCK_50   ; 4.875 ; 4.875 ; Rise       ; CLOCK_50        ;
+;  HEX5[1]  ; CLOCK_50   ; 4.800 ; 4.800 ; Rise       ; CLOCK_50        ;
+;  HEX5[2]  ; CLOCK_50   ; 5.615 ; 5.615 ; Rise       ; CLOCK_50        ;
+;  HEX5[3]  ; CLOCK_50   ; 5.398 ; 5.398 ; Rise       ; CLOCK_50        ;
+;  HEX5[4]  ; CLOCK_50   ; 5.634 ; 5.634 ; Rise       ; CLOCK_50        ;
+;  HEX5[5]  ; CLOCK_50   ; 5.222 ; 5.222 ; Rise       ; CLOCK_50        ;
+;  HEX5[6]  ; CLOCK_50   ; 4.771 ; 4.771 ; Rise       ; CLOCK_50        ;
+; HEX6[*]   ; CLOCK_50   ; 5.162 ; 5.162 ; Rise       ; CLOCK_50        ;
+;  HEX6[0]  ; CLOCK_50   ; 5.162 ; 5.162 ; Rise       ; CLOCK_50        ;
+;  HEX6[1]  ; CLOCK_50   ; 5.531 ; 5.531 ; Rise       ; CLOCK_50        ;
+;  HEX6[2]  ; CLOCK_50   ; 5.716 ; 5.716 ; Rise       ; CLOCK_50        ;
+;  HEX6[3]  ; CLOCK_50   ; 5.291 ; 5.291 ; Rise       ; CLOCK_50        ;
+;  HEX6[4]  ; CLOCK_50   ; 5.757 ; 5.757 ; Rise       ; CLOCK_50        ;
+;  HEX6[5]  ; CLOCK_50   ; 5.502 ; 5.502 ; Rise       ; CLOCK_50        ;
+;  HEX6[6]  ; CLOCK_50   ; 5.337 ; 5.337 ; Rise       ; CLOCK_50        ;
+; HEX7[*]   ; CLOCK_50   ; 4.978 ; 4.978 ; Rise       ; CLOCK_50        ;
+;  HEX7[0]  ; CLOCK_50   ; 5.576 ; 5.576 ; Rise       ; CLOCK_50        ;
+;  HEX7[1]  ; CLOCK_50   ; 4.978 ; 4.978 ; Rise       ; CLOCK_50        ;
+;  HEX7[2]  ; CLOCK_50   ; 5.470 ; 5.470 ; Rise       ; CLOCK_50        ;
+;  HEX7[3]  ; CLOCK_50   ; 5.451 ; 5.451 ; Rise       ; CLOCK_50        ;
+;  HEX7[4]  ; CLOCK_50   ; 5.475 ; 5.475 ; Rise       ; CLOCK_50        ;
+;  HEX7[5]  ; CLOCK_50   ; 5.488 ; 5.488 ; Rise       ; CLOCK_50        ;
+;  HEX7[6]  ; CLOCK_50   ; 5.315 ; 5.315 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 4.000 ; 4.000 ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 4.168 ; 4.168 ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 4.000 ; 4.000 ; Rise       ; CLOCK_50        ;
+; LEDR[*]   ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
+;  LEDR[5]  ; CLOCK_50   ; 4.252 ; 4.252 ; Rise       ; CLOCK_50        ;
+;  LEDR[6]  ; CLOCK_50   ; 4.252 ; 4.252 ; Rise       ; CLOCK_50        ;
+;  LEDR[7]  ; CLOCK_50   ; 4.138 ; 4.138 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Progagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDG[5]     ; 5.703 ;    ;    ; 5.703 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Progagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; LEDG[5]     ; 3.081 ;    ;    ; 3.081 ;
++------------+-------------+-------+----+----+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 7731     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 7731     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 75    ; 75   ;
+; Unconstrained Output Ports      ; 62    ; 62   ;
+; Unconstrained Output Port Paths ; 230   ; 230  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Oct 08 13:44:03 2014
+Info: Command: quartus_sta EECE_LAB3 -c EECE_LAB3
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'EECE_LAB3.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -4.695
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.695      -146.712 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -75.380 CLOCK_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.443
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.443       -32.469 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -75.380 CLOCK_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 462 megabytes
+    Info: Processing ended: Wed Oct 08 13:44:06 2014
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

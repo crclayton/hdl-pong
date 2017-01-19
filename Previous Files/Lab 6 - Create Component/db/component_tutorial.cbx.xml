@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="component_tutorial">
+		<CBX_INST_ENTRY INSTANCE_NAME="|component_tutorial|embedded_system:U0|embedded_system_nios2_qsys_0:nios2_qsys_0|embedded_system_nios2_qsys_0_nios2_oci:the_embedded_system_nios2_qsys_0_nios2_oci|embedded_system_nios2_qsys_0_nios2_ocimem:the_embedded_system_nios2_qsys_0_nios2_ocimem|embedded_system_nios2_qsys_0_ociram_sp_ram_module:embedded_system_nios2_qsys_0_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_2391.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|component_tutorial|embedded_system:U0|embedded_system_nios2_qsys_0:nios2_qsys_0|embedded_system_nios2_qsys_0_register_bank_a_module:embedded_system_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_ulh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|component_tutorial|embedded_system:U0|embedded_system_nios2_qsys_0:nios2_qsys_0|embedded_system_nios2_qsys_0_register_bank_b_module:embedded_system_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_vlh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|component_tutorial|embedded_system:U0|embedded_system_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_snd1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

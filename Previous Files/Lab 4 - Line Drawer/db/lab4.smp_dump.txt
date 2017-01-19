@@ -1,0 +1,19 @@
+
+State Machine - |lab5|PRES_STATE
+Name PRES_STATE.game_over PRES_STATE.pre_game_over PRES_STATE.erase_bf PRES_STATE.draw_bf PRES_STATE.erase_bg PRES_STATE.draw_bg PRES_STATE.erase_rf PRES_STATE.draw_rf PRES_STATE.erase_rg PRES_STATE.draw_rg PRES_STATE.draw_ball PRES_STATE.erase_ball PRES_STATE.pause PRES_STATE.reset PRES_STATE.clear PRES_STATE.idle 
+PRES_STATE.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+PRES_STATE.clear 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+PRES_STATE.reset 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+PRES_STATE.pause 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+PRES_STATE.erase_ball 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+PRES_STATE.draw_ball 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+PRES_STATE.draw_rg 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+PRES_STATE.erase_rg 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+PRES_STATE.draw_rf 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+PRES_STATE.erase_rf 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+PRES_STATE.draw_bg 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+PRES_STATE.erase_bg 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+PRES_STATE.draw_bf 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+PRES_STATE.erase_bf 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+PRES_STATE.pre_game_over 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+PRES_STATE.game_over 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
